@@ -1,0 +1,181 @@
+body {
+    padding: 50px;
+    font: 0.8em "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.headName {
+    margin-right: 5px;
+    font-weight:bolder;
+}
+
+#wrapHeaderDiv {
+    position:fixed;
+    left:25px;
+    right:25px;
+    width:auto;
+}
+
+#wrapperDiv {
+    position:fixed;
+    top: 130px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 90%;
+    overflow:auto;
+    height: 80%;
+
+}
+
+.div_SP {
+    margin-bottom: 2em;
+    border: 1px solid blue;
+    padding-bottom: 25px;
+    width: 900px;
+    margin-left: auto;
+    margin-right:auto;
+    //box-shadow: 8px 8px 10px #ff0a1b;
+    border-radius: 5px;
+
+
+}
+
+
+/*
+.div_SP {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+*/
+
+.div_SP_space {
+    height: 15px;
+}
+
+.procName {
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    border: 2px dotted black;
+    text-align: center;
+}
+
+.procType {
+    margin-top: 5px;
+    margin-left: 5px;
+
+}
+
+.procParams {
+    margin: 5px;
+
+}
+
+.procReturns {
+    margin-top: 5px;
+    margin-left: 5px;
+    //margin-left:35px;
+
+}
+
+.procComment {
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.procBody {
+
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+.procBody .headName {
+    text-align:center;
+    margin-left: 25%;
+
+}
+
+.div_SP_header {
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/***** for printing ****/
+
+@media print {
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #FAFAFA;
+        font: 12pt "Tahoma";
+    }
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    #wrapHeaderDiv {
+        display: none;
+
+    }
+
+    .div_SP {
+        border: 0px;
+        margin:0;
+        padding:0;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    @media print {
+        .page {
+            margin: 0;
+            border: initial;
+            border-radius: initial;
+            width: initial;
+            min-height: initial;
+            box-shadow: initial;
+            background: initial;
+            page-break-after: always;
+        }
+
+
+
+}

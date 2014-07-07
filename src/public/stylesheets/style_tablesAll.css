@@ -1,0 +1,186 @@
+
+
+.headName {
+    margin-right: 5px;
+    font-weight:bolder;
+}
+
+#wrapHeaderDiv {
+    position:fixed;
+    left:25px;
+    right:25px;
+    width:auto;
+}
+
+#wrapperDiv {
+    position:fixed;
+    top: 130px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 90%;
+    overflow:auto;
+    height: 80%;
+
+}
+
+.div_tbl {
+    margin-bottom: 2em;
+    border: 1px solid blue;
+    padding-bottom: 25px;
+    width: 900px;
+    margin-left: auto;
+    margin-right:auto;
+//box-shadow: 8px 8px 10px #ff0a1b;
+    border-radius: 5px;
+
+
+}
+
+.div_tbl_space {
+    height: 15px;
+}
+
+
+.tblName {
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    border: 2px dotted black;
+    text-align: center;
+}
+
+.tblType {
+    margin-top: 5px;
+    margin-left: 5px;
+
+}
+
+
+.tblComment {
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.tblBody {
+
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+.tblBody .headName {
+    text-align:center;
+    margin-left: 25%;
+
+}
+
+.tblBody .tblBodyText {
+    padding: 10px;
+}
+
+.div_tbl_header {
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+
+/*** column table ***/
+
+/* the Div container */
+.tblColumnList {
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+
+}
+
+.tblColumnList-Table {
+    width: 98%;
+    border-collapse: collapse;
+    //border: 1px solid red;
+
+}
+
+.tblColumnList-Table thead {
+
+
+}
+
+.tblColumnList-Table thead th {
+    text-align: center;
+
+}
+
+.tblColumnList-Table td {
+    font-size: 0.8em;
+
+}
+
+.tblColumnList-Table tbody tr:nth-child(even) {
+    background-color: lightgrey;
+}
+
+.tblColumnList-Table td:not(:first-child), .tblColumnList-Table td:not(:last-child),.tblColumnList-Table th:not(:first-child), .tblColumnList-Table th:not(:last-child) {
+    border-right: 1px solid black;
+    padding: 5px;
+
+}
+
+.table-Field {
+
+
+}
+
+.table-Type {
+
+    width: 60px;
+
+
+}
+
+.table-Collation {
+
+}
+
+.table-Null {
+
+
+}
+
+.table-Key {
+
+
+}
+
+.table-Default {
+
+
+}
+
+.table-Comment {
+
+}

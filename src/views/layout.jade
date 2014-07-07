@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    block cssIncludes
+        link(rel='stylesheet', href='/stylesheets/style.css')
+
+    block jsIncludes
+        script(rel='text/javascript', src='/javascripts/jquery-1.11.1.min.js', charset='utf-8')
+        script(rel='text/javascript', src='/javascripts/btn-back.js', charset='utf-8')
+
+
+
+  body
+    block header
+      div#back-button
+        button#btn_back Home
+
+    block content

@@ -1,0 +1,331 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font: 0.8em "Tahoma";
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.page {
+    width: 21cm;
+    //min-height: 29.7cm;
+    height: 29.7cm;
+    padding: 1cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.headName {
+    margin-right: 5px;
+    font-weight:bolder;
+}
+
+#wrapHeaderDiv {
+    /*
+    position:fixed;
+    left:25px;
+    right:25px;
+    width:auto;
+    */
+}
+
+#wrapperDiv {
+    /*
+    position:fixed;
+    top: 130px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 90%;
+    overflow:auto;
+    height: 80%;
+    */
+
+}
+
+/*
+.div_tbl {
+    margin-bottom: 2em;
+    border: 1px solid blue;
+    padding-bottom: 25px;
+    width: 900px;
+    margin-left: auto;
+    margin-right:auto;
+
+    border-radius: 5px;
+
+
+}
+*/
+
+.div_tbl {
+    border: 0px;
+    margin:0;
+    padding:0;
+}
+
+.div_tbl_space {
+    height: 15px;
+}
+
+
+.tblName {
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    border: 2px dotted black;
+    text-align: center;
+}
+
+.tblType {
+    margin-top: 5px;
+    margin-left: 5px;
+
+}
+
+
+.tblComment {
+    width: 100%;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.tblBody {
+
+    width: 100%;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+.tblBody .headName {
+    text-align:center;
+    margin-left: 25%;
+
+}
+
+.div_tbl_header {
+    width: 100%;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+
+/*** column table ***/
+
+/* the Div container */
+.tblColumnList {
+    width: 100%;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+
+}
+
+.tblColumnList-Table {
+    width: 98%;
+    border-collapse: collapse;
+//border: 1px solid red;
+
+}
+
+.tblColumnList-Table thead {
+
+
+}
+
+.tblColumnList-Table thead th {
+    text-align: center;
+
+}
+
+.tblColumnList-Table td {
+    font-size: 0.7em;
+
+}
+
+.tblColumnList-Table th, .tblColumnList-Table td {
+    padding: 5px;
+    text-align: center;
+}
+
+.tblColumnList-Table tbody tr:nth-child(even) {
+    background-color: lightgrey;
+}
+
+
+
+.tblColumnList-Table td:not(:last-child), .tblColumnList-Table th:not(:last-child) {
+    border-right: 1px solid black;
+
+
+
+}
+
+.table-Field {
+
+
+}
+
+.table-Type {
+
+    width: 60px;
+
+
+}
+
+.table-Collation {
+
+}
+
+.table-Null {
+
+
+}
+
+.table-Key {
+
+
+}
+
+.table-Default {
+
+
+}
+
+.table-Comment {
+
+}
+
+
+.wrapFooterDiv {
+    position: absolute;
+    bottom: 5px;
+    margin-left: auto;
+    margin-right:auto;
+    width: 17cm;
+
+}
+
+.headerPrint {
+    font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+    text-align:center;
+    padding-bottom: 1%;
+
+}
+
+
+.footerPrint {
+    font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+    text-align:center;
+    padding-bottom: 1%;
+
+}
+
+
+/** Intro Site **/
+
+#introSite {
+    width: 80%;
+    height: 90%;
+    border: 0px solid red;
+    position: absolute;
+
+}
+
+
+#introTitle {
+
+    margin-top: 10%;
+
+
+
+}
+
+#introTitle p {
+    text-align: center;
+    font-size: 2em;
+
+}
+
+#introTitleDetails {
+
+}
+
+#introTitleDetails p {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align:center;
+    margin-top: 20%;
+    font-size: 1.2em;
+}
+
+#introWrapper {
+
+    position:absolute;
+    bottom: 15px;
+    left: 25px;
+
+
+}
+
+#introVersion {
+
+
+}
+
+#introVersion p {
+
+}
+
+#introAuthor {
+
+}
+
+#introAuthor p{
+
+}
+
+#introDate {
+
+}
+
+#introDate p {
+
+}
+
+#introCustomer {
+
+}
+
+#introCustomer p {
+
+}

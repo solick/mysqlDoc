@@ -1,0 +1,264 @@
+
+.headName {
+    margin-right: 5px;
+    font-weight:bolder;
+}
+
+#wrapHeaderDiv {
+    position:fixed;
+    left:25px;
+    right:25px;
+    width:auto;
+}
+
+#mainListDiv {
+    position:fixed;
+    top: 130px;
+    margin-left: 5%;
+    margin-right: 0.025%;
+    padding-right: 0.025%;
+    width: 350px;
+    height: 84%;
+    box-shadow: 8px 8px 10px #ff0a1b;
+//margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+#mainListDiv ul {
+    width: 99%;
+    height: 95%;
+//border: 1px solid green;
+    overflow: auto;
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+#mainListDiv li {
+    padding-bottom: 5px;
+}
+
+.selectedLi {
+    color: forestgreen;
+    font-weight: 800;
+}
+
+#mainListDiv ul li:hover {
+    color: red;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+
+#mainDiv {
+
+
+}
+
+
+
+.mainDivClass {
+    position:fixed;
+    top: 130px;
+    left: 550px;
+    margin-left: 25px;
+    width: 980px;
+    height:90%;
+    margin-bottom: 40px;
+
+}
+
+
+.div_tbl {
+    margin-bottom: 2em;
+    border: 1px solid #ff0a1b;
+    padding-bottom: 25px;
+    width: 900px;
+    height: 90%;
+    margin-left: auto;
+    margin-right:auto;
+    box-shadow: 8px 8px 10px #ff0a1b;
+    border-radius: 5px;
+    overflow:auto;
+    display:none;
+
+
+}
+
+.div_tbl_space {
+    height: 15px;
+}
+
+
+.tblName {
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    border: 2px dotted black;
+    text-align: center;
+}
+
+.tblType {
+    margin-top: 5px;
+    margin-left: 5px;
+
+}
+
+
+.tblComment {
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.tblBody {
+
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+.tblBody .headName {
+    text-align:center;
+    margin-left: 25%;
+
+}
+
+.tblBody .tblBodyText {
+    padding: 10px;
+}
+
+.div_tbl_header {
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+
+/*** column table ***/
+
+/* the Div container */
+.tblColumnList {
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+
+}
+
+.tblColumnList-Table {
+    width: 98%;
+    border-collapse: collapse;
+//border: 1px solid red;
+
+}
+
+.tblColumnList-Table thead {
+
+
+}
+
+.tblColumnList-Table thead th {
+    text-align: center;
+
+}
+
+.tblColumnList-Table td {
+    font-size: 0.8em;
+
+}
+
+.tblColumnList-Table tbody tr:nth-child(even) {
+    background-color: lightgrey;
+}
+
+.tblColumnList-Table td:not(:first-child), .tblColumnList-Table td:not(:last-child),.tblColumnList-Table th:not(:first-child), .tblColumnList-Table th:not(:last-child) {
+    border-right: 1px solid black;
+    padding: 5px;
+
+}
+
+.table-Field {
+
+
+}
+
+.table-Type {
+
+    width: 60px;
+
+
+}
+
+.table-Collation {
+
+}
+
+.table-Null {
+
+
+}
+
+.table-Key {
+
+
+}
+
+.table-Default {
+
+
+}
+
+.table-Comment {
+
+}
+
+
+/**********/
+
+#mainDiv2 {
+    position:fixed;
+    top: 130px;
+    overflow:auto;
+    height: 80%;
+    display:none;
+    left: 550px;
+    margin-left: 25px;
+    width: 980px;
+    margin-bottom: 40px;
+    overflow:auto;
+}
+
+.div_tbl2 {
+    margin-bottom: 2em;
+    border: 1px solid #ff0a1b;
+    padding-bottom: 25px;
+    width: 900px;
+    margin-left: auto;
+    margin-right:auto;
+    box-shadow: 8px 8px 10px #ff0a1b;
+    border-radius: 5px;
+
+
+
+}

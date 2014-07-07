@@ -1,0 +1,23 @@
+extends layout
+block append cssIncludes
+    link(rel='stylesheet', href='/stylesheets/style_index.css')
+block append jsIncludes
+    script(rel='text/javascript', src='/javascripts/client_procedure.js', charset='utf-8')
+block header
+    div#main-header Mysql Documentation
+block content
+    div(id='title_div')
+        p(class='header2') Welcome to #{title}
+
+        p(class='normal_content') This is a automatic and web-based MySQL Database documentation tool.
+
+        p(class='normal_content') To use this tool you have the following options:
+
+        ul
+            li: a(href='./menu/procedures') a menu to list all or one procedure
+            li: a(href='./menu/tables') a menu to list all or one table
+            li: a(href='./list/procedures') list all procedures
+            li: a(href='./list/tables') List all tables
+            li: a(href='./print/procedures') a printable list of all procedures
+            li: a(href='./print/tables') a printable list of all tables
+

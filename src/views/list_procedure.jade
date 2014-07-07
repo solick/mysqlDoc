@@ -1,0 +1,9 @@
+extends layout
+block append cssIncludes
+    link(rel='stylesheet', href='/stylesheets/style_list_procedure.css')
+block append jsIncludes
+    script(rel='text/javascript', src='/javascripts/client_list_procedure.js', charset='utf-8')
+block append header
+    div#main-header Mysql Documentation
+block content
+    p Welcome to #{title}

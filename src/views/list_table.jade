@@ -1,0 +1,10 @@
+extends layout
+block append cssIncludes
+    link(rel='stylesheet', href='/stylesheets/style_list_table.css')
+block append jsIncludes
+    script(rel='text/javascript', src='/javascripts/client_list_table.js', charset='utf-8')
+block append header
+    div#main-header Mysql Documentation
+block content
+    div(class='error_div')
+        p No valid command. You need to

@@ -1,0 +1,70 @@
+extends layout
+block append cssIncludes
+    link(rel='stylesheet', href='/stylesheets/style_proceduresPrint.css')
+block append jsIncludes
+    script(rel='text/javascript', src='/javascripts/client_proceduresPrint.js', charset='utf-8')
+    script(rel='text/javascript', src='/javascripts/client_layoutHelper.js', charset='utf-8')
+block header
+
+block content
+
+    div(class="page")
+     div(id="introSite")
+        div(id="introTitle")
+            p= title
+        div(id="introTitleDetails")
+            p= titleDetails
+        div(id="introWrapper")
+            div(id="introVersion")
+                p= 'Version: ' + version
+            div(id="introAuthor")
+                p= 'Author: ' + author
+            div(id="introDate")
+                p= 'Date: ' + date
+            div(id="introCustomer")
+                p= 'Created for: ' + customer
+
+
+    div(id="wrapperDiv")
+        - var count = 2
+        - each row in results
+            div(class="page-break")
+            div(class="page")
+                div(class="wrapHeaderDiv")
+                    p(class="headerPrint")= title
+                div(class="div_SP")
+                    div(class="div_SP_space")
+                    div(class="div_SP_header")
+                        div(class="procName")
+                            span(class="headName")
+                                | Name:
+                            =row.name
+                        div(class="procType")
+                            span(class="headName")
+                                | Type:
+                            =row.type
+                        if row.type == "FUNCTION"
+                            div(class="procReturns")
+                                span(class="headName")
+                                    | Return of Function:
+                                =row.returns
+                        div(class="procParams")
+                            span(class="headName")
+                                | Parameter List:
+                            =row.param_list
+                    div(class="div_SP_space")
+                    div(class="procComment")
+                        span(class="headName")
+                            | Comment:
+                        p= row.comment
+                    div(class="div_SP_space")
+                    div(class="procBody")
+                        div(class="procBodySub")
+                            span(class="headName")
+                                | Function / Procedure Body:
+                            p(class="procBodyText")= row.body_utf8
+                    div(class="div_SP_space")
+                div(class="wrapFooterDiv")
+                    p(class="footerPrint")= 'page ' + count
+                        - count++
+

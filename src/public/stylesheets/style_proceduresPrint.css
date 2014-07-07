@@ -1,0 +1,265 @@
+/*** allg layout */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font: 1em "Tahoma";
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+/** Header and Footer **/
+.wrapHeaderDiv {
+
+
+}
+
+.wrapFooterDiv {
+    position: absolute;
+    bottom: 5px;
+    margin-left: auto;
+    margin-right:auto;
+    width: 17cm;
+
+}
+
+.headerPrint {
+    font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+    text-align:center;
+    padding-bottom: 1%;
+
+}
+
+
+.footerPrint {
+    font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+    text-align:center;
+    padding-bottom: 1%;
+
+}
+
+
+
+/* general page settings for printer */
+/*
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-before: allways;
+    }
+
+    .page-break {
+        display:block;
+        page-break-before: always;
+     }
+
+    .wrapHeaderDiv {
+        //display: none;
+
+    }
+
+    .wrapFooterDiv {
+        //display: none;
+
+    }
+}
+*/
+
+@media all {
+    .page-break { display:none;}
+}
+
+/**** Layout of procedures ***/
+
+/* main procedure div */
+
+.div_SP {
+    border: 0px;
+    margin:0;
+    padding:0;
+}
+
+.headName {
+    margin-right: 5px;
+    font-weight:bolder;
+}
+
+.div_SP_space {
+    height: 15px;
+}
+
+.procName {
+    margin: 5px;
+    font-size: 1em;
+    font-weight: bolder;
+    border: 2px dotted black;
+    text-align: center;
+}
+
+.procType {
+    margin-top: 5px;
+    margin-left: 5px;
+
+}
+
+.procParams {
+    margin: 5px;
+
+}
+
+.procReturns {
+    margin-top: 5px;
+    margin-left: 5px;
+//margin-left:35px;
+
+}
+
+.procComment {
+    width: 100%;
+    margin: 0 auto;
+    padding-left:15px;
+    padding-right: 15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.procBody {
+
+    width: 100%;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.8em;
+    display: none;
+}
+
+.procBody .headName {
+    text-align:center;
+    margin-left: 25%;
+
+}
+
+.div_SP_header {
+    width: 100%;
+    margin: 0 auto;
+    padding-left:15px;
+    padding-right: 15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+/** Intro Site **/
+
+#introSite {
+    width: 80%;
+    height: 90%;
+    border: 0px solid red;
+    position: absolute;
+
+}
+
+
+#introTitle {
+
+    margin-top: 10%;
+
+
+
+}
+
+#introTitle p {
+    text-align: center;
+    font-size: 2em;
+
+}
+
+#introTitleDetails {
+
+}
+
+#introTitleDetails p {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align:center;
+    margin-top: 20%;
+    font-size: 1.2em;
+}
+
+#introWrapper {
+
+    position:absolute;
+    bottom: 15px;
+    left: 25px;
+
+
+}
+
+#introVersion {
+
+
+}
+
+#introVersion p {
+
+}
+
+#introAuthor {
+
+}
+
+#introAuthor p{
+
+}
+
+#introDate {
+
+}
+
+#introDate p {
+
+}
+
+#introCustomer {
+
+}
+
+#introCustomer p {
+
+}

@@ -1,0 +1,10 @@
+extends layout
+block append cssIncludes
+    link(rel='stylesheet', href='/stylesheets/style_table.css')
+block append jsIncludes
+    script(rel='text/javascript', src='/javascripts/client_table.js', charset='utf-8')
+    //script(rel='text/javascript', src='/javascripts/client_layoutHelper.js', charset='utf-8')
+block append header
+    div(id="wrapHeaderDiv")
+        p(class="header2")= title
+block content

@@ -1,0 +1,203 @@
+body {
+    padding: 10px;
+    font: 0.8em "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.headName {
+    margin-right: 5px;
+    font-weight:bolder;
+}
+
+#headerDiv {
+    position:fixed;
+    left:25px;
+    right:25px;
+    width:auto;
+
+
+}
+
+#mainListDiv {
+    position:fixed;
+    top: 130px;
+    margin-left: 1%;
+    margin-right: 0.025%;
+    padding-right: 0.025%;
+    width: 350px;
+    height: 84%;
+    box-shadow: 8px 8px 10px #ff0a1b;
+    //margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+#mainListDiv ul {
+    width: 99%;
+    height: 95%;
+    //border: 1px solid green;
+    overflow: auto;
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+#mainListDiv li {
+    padding-bottom: 5px;
+}
+
+.selectedLi {
+    color: forestgreen;
+    font-weight: 800;
+}
+
+#mainListDiv ul li:hover {
+    color: red;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+#mainDiv {
+
+
+}
+
+
+
+.mainDivClass {
+    position:fixed;
+    top: 130px;
+    left: calc(350px + 2%);
+    margin-left: 25px;
+    width: 980px;
+    height:90%;
+    margin-bottom: 40px;
+
+}
+
+
+
+.div_SP {
+    margin-bottom: 2em;
+    border: 1px solid #ff0a1b;
+    padding-bottom: 25px;
+    width: 900px;
+    height:90%;
+    margin-left: auto;
+    margin-right:auto;
+    box-shadow: 8px 8px 10px #ff0a1b;
+    border-radius: 5px;
+    display:none;
+    overflow:auto;
+
+
+
+}
+
+
+/*
+.div_SP {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+*/
+
+.div_SP_space {
+    height: 15px;
+}
+
+.procName {
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    border: 2px dotted black;
+    text-align: center;
+}
+
+.procType {
+    margin-top: 5px;
+    margin-left: 5px;
+
+}
+
+.procParams {
+    margin: 5px;
+
+}
+
+.procReturns {
+    margin-top: 5px;
+    margin-left: 5px;
+//margin-left:35px;
+
+}
+
+.procComment {
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.procBody {
+
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+.procBody .headName {
+    text-align:center;
+    margin-left: 25%;
+
+}
+
+.div_SP_header {
+    width: 800px;
+    margin: 0 auto;
+    padding-left:15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/***************/
+
+#mainDiv2 {
+    position:fixed;
+    top: 130px;
+    overflow:auto;
+    height: 80%;
+    display:none;
+    left: calc(350px + 2%);
+    margin-left: 25px;
+    width: 980px;
+    margin-bottom: 40px;
+
+}
+
+
+.div_SP2 {
+    margin-bottom: 2em;
+    border: 1px solid #ff0a1b;
+    padding-bottom: 25px;
+    width: 900px;
+    margin-left: auto;
+    margin-right:auto;
+    box-shadow: 8px 8px 10px #ff0a1b;
+    border-radius: 5px;
+}
