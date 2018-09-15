@@ -8,20 +8,12 @@ a {
 }
 
 #main-header {
-    position:absolute;
-    top:15px;
-    left: 10%;
-    right: 10%;
-    width:auto;
-    font: 28px "Lucida Grande", Helvetica, Arial, sans-serif;
-    text-align: center;
+    background-color:indigo;
+    color: white;
 }
 
 #title_div {
-    margin-left:20%;
-    margin-right:20%;
-    position:relative;
-    width: auto;
+
 }
 
 #title_div ul {

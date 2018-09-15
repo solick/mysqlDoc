@@ -1,0 +1,98 @@
+extends layout
+
+block append cssIncludes
+    link(rel='stylesheet', href='/stylesheets/style_proceduresOverview.css')
+
+block append jsIncludes
+    script(rel='text/javascript', src='/javascripts/client_proceduresOverview.js', charset='utf-8')
+    script(rel='text/javascript', src='/javascripts/client_layoutHelper.js', charset='utf-8')
+
+block append header
+    div(id="headerDiv")
+        p(class="header2")= title
+
+block content
+    div(id="mainListDiv")
+        ul(id="mainList")
+            li(class="listRow")
+                |All Procedures
+            each row in results
+                li(class="listRow")= row.name
+
+
+
+    div(id="mainDiv", class="mainDivClass")
+        each row in results
+            div(class="div_SP", class=row.name)
+                div(class="div_SP_space")
+                div(class="div_SP_header")
+                    div(class="procName")
+                        span(class="headName")
+                            | Name:
+                        =row.name
+                    div(class="procType")
+                        span(class="headName")
+                            | Type:
+                        =row.type
+                    if row.type == "FUNCTION"
+                        div(class="procReturns")
+                            span(class="headName")
+                                | Return of Function:
+                            =row.returns
+                    div(class="procParams")
+                        span(class="headName")
+                            | Parameter List:
+                        =row.param_list
+
+                div(class="div_SP_space")
+                div(class="procComment")
+                    span(class="headName")
+                        | Comment:
+                    p= row.comment
+                div(class="div_SP_space")
+                div(class="procBody")
+                    div(class="procBodySub")
+                        span(class="headName")
+                            | Function / Procedure Body:
+                        p(class="procBodyText")= row.body_utf8
+
+                div(class="div_SP_space")
+
+
+    div(id="mainDiv2", class="mainDivClass")
+        each row in results
+            div(class="div_SP2")
+                div(class="div_SP_space")
+                div(class="div_SP_header")
+                    div(class="procName")
+                        span(class="headName")
+                            | Name:
+                        =row.name
+                    div(class="procType")
+                        span(class="headName")
+                            | Type:
+                        =row.type
+                    if row.type == "FUNCTION"
+                        div(class="procReturns")
+                            span(class="headName")
+                                | Return of Function:
+                            =row.returns
+                    div(class="procParams")
+                        span(class="headName")
+                            | Parameter List:
+                        =row.param_list
+
+                div(class="div_SP_space")
+                div(class="procComment")
+                    span(class="headName")
+                        | Comment:
+                    p= row.comment
+                div(class="div_SP_space")
+                div(class="procBody")
+                    div(class="procBodySub")
+                        span(class="headName")
+                            | Function / Procedure Body:
+                        p(class="procBodyText")= row.body_utf8
+
+                div(class="div_SP_space")
+

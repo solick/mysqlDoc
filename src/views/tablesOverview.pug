@@ -13,11 +13,11 @@ block content
         ul(id="mainList")
             li(class="listRow")
                 |All Tables
-            - each row in results
+            each row in results
                 li(class="listRow")= row.table_name
 
     div(id="mainDiv", class="mainDivClass")
-        - each row in results
+        each row in results
             div(class="div_tbl", class=row.table_name)
                 if row.table_type == 'BASE TABLE'
                     div(class="div_tbl_space")
@@ -67,7 +67,7 @@ block content
                                 th(class='table-Key') Key
                                 th(class='table-Default') Default
                                 th(class='table-Comment') Comment
-                        - each listRow in row.columnList
+                        each listRow in row.columnList
                             tr
                                 td= listRow.Field
                                 td= listRow.Type
@@ -86,7 +86,7 @@ block content
 
 
     div(id="mainDiv2", class="mainDivClass")
-        - each row in results
+        each row in results
             div(class="div_tbl2")
                 if row.table_type == 'BASE TABLE'
                     div(class="div_tbl_space")
@@ -136,7 +136,7 @@ block content
                                 th(class='table-Key') Key
                                 th(class='table-Default') Default
                                 th(class='table-Comment') Comment
-                        - each listRow in row.columnList
+                        each listRow in row.columnList
                             tr
                                 td= listRow.Field
                                 td= listRow.Type

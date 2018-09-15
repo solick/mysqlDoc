@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title= title
+        block cssIncludes
+            link(rel='stylesheet', href='/stylesheets/style.css')
+            link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+            link(rel='stylesheet', href='/bootstrap/css/bootstrap-grid.css')
+            link(rel='stylesheet', href='/bootstrap/css/bootstrap-reboot.css')
+
+        block jsIncludes
+            script(rel='text/javascript', src='/javascripts/jquery-3.3.1.min.js', charset='utf-8')
+            script(rel='text/javascript', src='/javascripts/btn-back.js', charset='utf-8')
+            script(rel='text/javascript', src='/bootstrap/js/bootstrap.bundle.js', charset='utf-8')
+            script(rel='text/javascript', src='/bootstrap/js/bootstrap.js', charset='utf-8')
+
+
+
+    body
+        block header
+            div#back-button
+                button#btn_back Home
+
+        block content

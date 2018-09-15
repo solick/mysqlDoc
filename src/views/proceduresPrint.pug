@@ -9,25 +9,25 @@ block header
 block content
 
     div(class="page")
-     div(id="introSite")
-        div(id="introTitle")
-            p= title
-        div(id="introTitleDetails")
-            p= titleDetails
-        div(id="introWrapper")
-            div(id="introVersion")
-                p= 'Version: ' + version
-            div(id="introAuthor")
-                p= 'Author: ' + author
-            div(id="introDate")
-                p= 'Date: ' + date
-            div(id="introCustomer")
-                p= 'Created for: ' + customer
+        div(id="introSite")
+            div(id="introTitle")
+                p= title
+            div(id="introTitleDetails")
+                p= titleDetails
+            div(id="introWrapper")
+                div(id="introVersion")
+                    p= 'Version: ' + version
+                div(id="introAuthor")
+                    p= 'Author: ' + author
+                div(id="introDate")
+                    p= 'Date: ' + date
+                div(id="introCustomer")
+                    p= 'Created for: ' + customer
 
 
     div(id="wrapperDiv")
         - var count = 2
-        - each row in results
+        each row in results
             div(class="page-break")
             div(class="page")
                 div(class="wrapHeaderDiv")
@@ -66,5 +66,5 @@ block content
                     div(class="div_SP_space")
                 div(class="wrapFooterDiv")
                     p(class="footerPrint")= 'page ' + count
-                        - count++
+                    - count++
 

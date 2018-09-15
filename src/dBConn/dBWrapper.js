@@ -25,7 +25,8 @@ var dBConn = function(dBConfig) {
         connectionLimit: 30,
         host: this.config.db.address,
         user: this.config.db.user,
-        password: this.config.db.password
+        password: this.config.db.password,
+        port: this.config.db.port
     });
 
     if(that.config.db.debugMode == true)
@@ -75,6 +76,7 @@ var dBConn = function(dBConfig) {
             if (err) {
                 if(that.config.db.debugMode == true) {
                     console.log("Error during connection to the database.");
+                    console.log(err);
                 }
                 return;
             }
@@ -88,8 +90,9 @@ var dBConn = function(dBConfig) {
                 if (err) {
                     if(that.config.db.debugMode == true) {
                         console.log("DB not connected, error during query");
+                        console.log(err);
                     }
-                    return nil;
+                    return null;
                 }
 
                 if(that.config.db.debugMode == true) {
