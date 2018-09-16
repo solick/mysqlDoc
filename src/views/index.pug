@@ -1,52 +1,35 @@
-extends layout
+extends navigation2
 
 block append cssIncludes
     link(rel='stylesheet', href='/stylesheets/style_index.css')
 block append jsIncludes
     script(rel='text/javascript', src='/javascripts/client_procedures.js', charset='utf-8')
-block header
-
-    div(id='main-header' class='container-fluid')
-        h1(class='text-center') #{title}
-
-        h2(class='text-center') This is a automatic and web-based MySQL Database documentation tool.
-
-block content
-
-    h3(class='text-center') To use this tool you have the following options:
-
-    div(id='menu-container' class'container')
-        div(class='row justify-content-md-center')
-            div(class='col col-lg-2')
-            div(class='col-md-auto')
-                a(href='./menu/procedures') a menu to list all or one procedure
-            div(class='col col-lg-2')
-        div(class='row justify-content-md-center')
-            div(class='col col-lg-2')
-            div(class='col-md-auto')
-                a(href='./menu/tables') a menu to list all or one table
-            div(class='col col-lg-2')
-        div(class='row justify-content-md-center')
-            div(class='col col-lg-2')
-            div(class='col-md-auto')
-                a(href='./list/procedures') list all procedures
-            div(class='col col-lg-2')
-        div(class='row justify-content-md-center')
-            div(class='col col-lg-2')
-            div(class='col-md-auto')
-                a(href='./list/tables') List all tables
-            div(class='col col-lg-2')
-        div(class='row justify-content-md-center')
-            div(class='col col-lg-2')
-            div(class='col-md-auto')
-                a(href='./print/procedures') a printable list of all procedures
-            div(class='col col-lg-2')
-        div(class='row justify-content-md-center')
-            div(class='col col-lg-2')
-            div(class='col-md-auto')
-                a(href='./print/tables') a printable list of all tables
-            div(class='col col-lg-2')
 
 
+block append content
 
+    div(class='container mt-5', id='welcome-card')
+        div(class='row')
+            div(class='col')
+            div(class='col')
+                div(class='card border-dark rounded', style='width: 30rem')
+                    h3(class='text-center mt-3') Automatic documentation for MySQL databases
+                    div(class='card-body')
+                        h5(class='card-title text-center') With this tool you can do the following:
+                        ul(class='')
+                            li(class='') open a list of all Procedures and select a specific one
+                            li(class='') open a list of all Tables and select a specific one
+                            li(class='') List all Procedures
+                            li(class='') List all Tables
+                            li(class='') Generate a printable document of all Procedures
+                            li(class='') Generate a printable document of all Tables
+            div(class='col')
+
+
+    div(class='container', id='containerListContent', style='display:none; ')
+        div(class='row')
+            div(class='col')
+            div(class='col')
+                p(class='text-center align-middle') This is a test
+            div(class='col')
 
