@@ -15,17 +15,17 @@ config.srv.env = "development";
 
 
 config.db = {};
-config.db.address = 'localhost';
-config.db.user = '1nce';
-config.db.password = '1nce';
-config.db.database = '1nce_tests';
-config.db.port = '33772';
+config.db.address = '{localhost or IP}';
+config.db.user = '{user}';
+config.db.password = '{password}';
+config.db.database = '{database}';
+config.db.port = '{port}';
 config.db.debugMode = true;
 
 config.dbDoc = {};
-config.dbDoc.Author = "Lyn Sören Matten";
-config.dbDoc.Date = "2018-10-20";
-config.dbDoc.Customer = "1nce GmbH";
+config.dbDoc.Author = "{your name}";
+config.dbDoc.Date = "{date}";
+config.dbDoc.Customer = "{customer or owner of database}";
 
 config.dbDoc.Procedures = {};
 config.dbDoc.Procedures.Title = "List of Stored Procedures";
