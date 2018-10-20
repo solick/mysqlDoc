@@ -13,6 +13,8 @@ var route_menu = require('./routes/menu');
 var dBWrapper = require('./dBConn/dBWrapper');
 var config = require('./config');
 
+var debug = require('debug')('app');
+
 
 var mysql = require('mysql');
 
@@ -68,7 +70,7 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-    console.log("Error handling for development mode");
+    debug("Error handling for development mode");
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
         res.render('error', {

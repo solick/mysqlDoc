@@ -1,0 +1,65 @@
+extends layout
+
+block header
+
+    div(id='main-header' class='container-fluid sticky-top')
+        h1(class='text-center') #{title}
+
+        h2(class='text-center') This is a automatic and web-based MySQL Database documentation tool.
+
+block append jsIncludes
+    script(rel='text/javascript', src='/javascripts/client_navigation.js', charset='utf-8')
+
+block content
+
+    nav(class='navbar navbar-light navbar-expand-md sticky-top' id='navigation' style='background-color: #e3f2fd;')
+        div(class='navbar-collapse collapse' id='collapseNavbar')
+            ul(class='navbar-nav')
+                li(class='nav-item-active')
+                    a(class='nav-link' href='#', id='navHome') Home
+                li(class='nav-item')
+                    a(class='nav-link' href='#' id='navAllProcedures') All Procedures
+                li(class='nav-item-active')
+                    a(class='nav-link' href='#' id='navAllTables') All Tables
+                li(class='nav-item-active')
+                    a(class='nav-link' href='#' id='navPrintProcedures') Print Procedures
+                li(class='nav-item-active')
+                    a(class='nav-link' href='#' id='navPrintTables') Print Tables
+            ul(class='navbar-nav ml-auto')
+                li(class='nav-item')
+                    a(class='nav-link', href='#', id='navAbout') About
+
+//-
+    h3(class='text-center') To use this tool you have the following options:
+
+    div(id='menu-container' class'container')
+        div(class='row justify-content-md-center')
+            div(class='col col-lg-2')
+            div(class='col-md-auto')
+                a(href='./menu/procedures') a menu to list all or one procedure
+            div(class='col col-lg-2')
+        div(class='row justify-content-md-center')
+            div(class='col col-lg-2')
+            div(class='col-md-auto')
+                a(href='./menu/tables') a menu to list all or one table
+            div(class='col col-lg-2')
+        div(class='row justify-content-md-center')
+            div(class='col col-lg-2')
+            div(class='col-md-auto')
+                a(href='./list/procedures') list all procedures
+            div(class='col col-lg-2')
+        div(class='row justify-content-md-center')
+            div(class='col col-lg-2')
+            div(class='col-md-auto')
+                a(href='./list/tables') List all tables
+            div(class='col col-lg-2')
+        div(class='row justify-content-md-center')
+            div(class='col col-lg-2')
+            div(class='col-md-auto')
+                a(href='./print/procedures') a printable list of all procedures
+            div(class='col col-lg-2')
+        div(class='row justify-content-md-center')
+            div(class='col col-lg-2')
+            div(class='col-md-auto')
+                a(href='./print/tables') a printable list of all tables
+            div(class='col col-lg-2')

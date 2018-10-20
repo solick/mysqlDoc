@@ -5,6 +5,7 @@
 var express = require('express');
 //var router = express.Router();
 var mysql = require('mysql');
+var debug = require('debug')('dbWrapper');
 
 //TODO: mysql console log dependent on config.db.debugMode state
 
@@ -17,7 +18,7 @@ var dBConn = function(dBConfig) {
     this.config = dBConfig;
     //console.log(this.config);
 
-    if (that.config == undefined) {
+    if (that.config === undefined) {
         throw Error("No database configuration found");
         return;
     }
@@ -29,9 +30,9 @@ var dBConn = function(dBConfig) {
         port: this.config.db.port
     });
 
-    if(that.config.db.debugMode == true)
+    if(that.config.db.debugMode === true)
     {
-        console.log("dBConn instance established");
+        debug("dBConn instance established");
     }
 
 
@@ -46,7 +47,7 @@ var dBConn = function(dBConfig) {
         //console.log("config: " + that.config);
         var sqlStr = "";
 
-        if (procedureName == undefined) {
+        if (procedureName === undefined) {
             sqlStr += "SELECT " +
                 "mysql.proc.name, " +
                 "mysql.proc.param_list, " +
@@ -74,29 +75,29 @@ var dBConn = function(dBConfig) {
         that.pool.getConnection(function (err, connection) {
 
             if (err) {
-                if(that.config.db.debugMode == true) {
-                    console.log("Error during connection to the database.");
-                    console.log(err);
+                if(that.config.db.debugMode === true) {
+                    debug("Error during connection to the database.");
+                    debug(err);
                 }
                 return;
             }
             else {
-                if(that.config.db.debugMode == true) {
-                    console.log('connected to mysql server as id ' + connection.threadId);
+                if(that.config.db.debugMode === true) {
+                    debug('connected to mysql server as id ' + connection.threadId);
                 }
             }
 
             connection.query(sqlStr, function (err, rows) {
                 if (err) {
-                    if(that.config.db.debugMode == true) {
-                        console.log("DB not connected, error during query");
-                        console.log(err);
+                    if(that.config.db.debugMode === true) {
+                        debug("DB not connected, error during query");
+                        debug(err);
                     }
                     return null;
                 }
 
-                if(that.config.db.debugMode == true) {
-                    console.log("successfully read stored procedure query from db");
+                if(that.config.db.debugMode === true) {
+                    debug("successfully read stored procedure query from db");
                 }
                 /*
                  res.render(jadeFile, {
@@ -123,7 +124,7 @@ var dBConn = function(dBConfig) {
     function queryTables(callback, tableName) {
         var sqlStr = "";
 
-        if(tableName == undefined)
+        if(tableName === undefined)
         {
             sqlStr += "SELECT " +
                 "`information_schema`.`tables`.`TABLE_NAME` AS `table_name`," +
@@ -149,27 +150,27 @@ var dBConn = function(dBConfig) {
         that.pool.getConnection(function(err, connection) {
 
             if (err) {
-                if(that.config.db.debugMode == true) {
-                    console.log("Error during connection to the database.");
+                if(that.config.db.debugMode === true) {
+                    debug("Error during connection to the database.");
                 }
                 return;
             }
             else {
-                if(that.config.db.debugMode == true) {
-                    console.log('connected to mysql server as id ' + connection.threadId);
+                if(that.config.db.debugMode === true) {
+                    debug('connected to mysql server as id ' + connection.threadId);
                 }
             }
 
             connection.query(sqlStr, function(err, rows) {
                 if(err)
                 {
-                    if(that.config.db.debugMode == true) {
-                        console.log("DB not connected, error during query");
+                    if(that.config.db.debugMode === true) {
+                        debug("DB not connected, error during query");
                     }
                     return;
                 }
-                if(that.config.db.debugMode == true) {
-                    console.log("successfully read all tables from database.");
+                if(that.config.db.debugMode === true) {
+                    debug("successfully read all tables from database.");
                 }
 
                 //console.log(rows);
@@ -182,14 +183,14 @@ var dBConn = function(dBConfig) {
                     that.pool.getConnection(function(err, connection2) {
 
                         if (err) {
-                            if(that.config.db.debugMode == true) {
-                                console.log("Error during connection to the database.");
+                            if(that.config.db.debugMode === true) {
+                                debug("Error during connection to the database.");
                             }
                             return;
                         }
                         else {
-                            if(that.config.db.debugMode == true) {
-                                console.log('connected to mysql server as id ' + connection2.threadId);
+                            if(that.config.db.debugMode === true) {
+                                debug('connected to mysql server as id ' + connection2.threadId);
                             }
                         }
 
@@ -202,8 +203,8 @@ var dBConn = function(dBConfig) {
 
                             if(err)
                             {
-                                if(that.config.db.debugMode == true) {
-                                    console.log(err);
+                                if(that.config.db.debugMode === true) {
+                                    debug(err);
                                 }
                                 count++;
                             }
@@ -224,8 +225,8 @@ var dBConn = function(dBConfig) {
                                     obj.collation_connection = tmpRow[0]["collation_connection"];
                                 }
                                 else {
-                                    if(that.config.db.debugMode == true) {
-                                        console.log("undefined object");
+                                    if(that.config.db.debugMode === true) {
+                                        debug("undefined object");
                                     }
                                 }
 
@@ -234,14 +235,14 @@ var dBConn = function(dBConfig) {
                                 that.pool.getConnection(function (err, connection3) {
 
                                     if (err) {
-                                        if(that.config.db.debugMode == true) {
-                                            console.log("Error during connection to the database.");
+                                        if(that.config.db.debugMode === true) {
+                                            debug("Error during connection to the database.");
                                         }
                                         return;
                                     }
                                     else {
-                                        if(that.config.db.debugMode == true) {
-                                            console.log('connected to mysql server as id ' + connection3.threadId);
+                                        if(that.config.db.debugMode === true) {
+                                            debug('connected to mysql server as id ' + connection3.threadId);
                                         }
                                     }
 
@@ -252,8 +253,8 @@ var dBConn = function(dBConfig) {
                                     connection3.query(sqlStr2, function (err, tmpRow2) {
 
                                         if (err) {
-                                            if(that.config.db.debugMode == true) {
-                                                console.log(err);
+                                            if(that.config.db.debugMode === true) {
+                                                debug(err);
                                             }
                                         }
                                         else {
@@ -287,7 +288,7 @@ var dBConn = function(dBConfig) {
 
                                         count++;
                                         //console.log(count + ": " + obj.table_name + " -- length: " + rows.length);
-                                        if (count == rows.length) {
+                                        if (count === rows.length) {
                                             callback(null, rows);
                                         }
 
@@ -330,7 +331,7 @@ var dBConn = function(dBConfig) {
      */
     dBConn.prototype.procedures = function (req, res) {
         if(that.config.debugLevel > 2) {
-            console.log("get list of all stored procedures and functions");
+            debug("get list of all stored procedures and functions");
         }
 
         querySP(function (err, rows) {
@@ -351,7 +352,7 @@ var dBConn = function(dBConfig) {
      */
     dBConn.prototype.procedure = function (req, res) {
         if(that.config.debugLevel > 2) {
-            console.log("get list of stored procedure or function " + req.params.name);
+            debug("get list of stored procedure or function " + req.params.name);
         }
 
         querySP(function (err, rows) {
@@ -372,13 +373,13 @@ var dBConn = function(dBConfig) {
      */
     dBConn.prototype.tables = function (req, res) {
         if(that.config.debugLevel > 2) {
-            console.log("get list of all tables");
+            debug("get list of all tables");
         }
 
         queryTables(function(err, rows) {
 
             if(that.config.debugLevel > 2) {
-                console.log("successfully read from db, now passing results to jade template");
+                debug("successfully read from db, now passing results to jade template");
             }
             res.render('TablesAll', {
                 title: that.config.dbDoc.Tables.Title,
@@ -395,12 +396,12 @@ var dBConn = function(dBConfig) {
      */
     dBConn.prototype.table = function (req, res) {
         if(that.config.debugLevel > 2) {
-            console.log("get information about table " + req.params.name);
+            debug("get information about table " + req.params.name);
         }
 
         queryTables(function(err, rows) {
             if (that.config.debugLevel > 2) {
-            console.log("successfully read from db, now passing results to jade template");
+            debug("successfully read from db, now passing results to jade template");
             }
             res.render('TablesAll', {
                 title: that.config.dbDoc.Tables.Title,
@@ -420,7 +421,7 @@ var dBConn = function(dBConfig) {
     dBConn.prototype.proceduresMenu = function(req, res) {
 
         if (that.config.debugLevel > 2) {
-            console.log("Menu with list of all stored procedures and functions");
+            debug("Menu with list of all stored procedures and functions");
         }
 
         querySP(function(err, rows) {
@@ -441,7 +442,7 @@ var dBConn = function(dBConfig) {
     dBConn.prototype.tablesMenu = function(req, res) {
         if (that.config.debugLevel > 2) {
 
-            console.log("menu with list of all tables");
+            debug("menu with list of all tables");
         }
 
         queryTables(function(err, rows) {
@@ -463,13 +464,13 @@ var dBConn = function(dBConfig) {
     dBConn.prototype.proceduresPrint = function(req, res) {
         if (that.config.debugLevel > 2) {
 
-            console.log("get printable list of all stored procedures and functions");
+            debug("get printable list of all stored procedures and functions");
         }
 
         querySP(function(err, rows) {
             if (that.config.debugLevel > 2) {
 
-                console.log("successfully read from db, now passing results to jade template");
+                debug("successfully read from db, now passing results to jade template");
             }
             res.render('proceduresPrint', {
                 title: that.config.dbDoc.Procedures.Title,
@@ -493,13 +494,13 @@ var dBConn = function(dBConfig) {
      */
     dBConn.prototype.tablesPrint = function(req, res) {
         if (that.config.debugLevel > 2) {
-            console.log("get printable list of all tables");
+            debug("get printable list of all tables");
         }
 
         queryTables(function(err, rows) {
             if (that.config.debugLevel > 2) {
 
-                console.log("successfully read from db, now passing results to jade template");
+                debug("successfully read from db, now passing results to jade template");
             }
             res.render('TablesPrint', {
                 title: that.config.dbDoc.Tables.Title,
