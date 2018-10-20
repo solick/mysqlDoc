@@ -2,25 +2,20 @@ extends layout
 
 block header
 
-<<<<<<< HEAD
-=======
 block append cssIncludes
     link(rel='stylesheet', href='/stylesheets/navigation.css')
 block append jsIncludes
     script(rel='text/javascript', src='/javascripts/client_navigation.js', charset='utf-8')
 
-
->>>>>>> master_conflict-20180916-171800
+block append header
     div(id='main-header' class='container-fluid sticky-top')
         h1(class='text-center') #{title}
 
         h2(class='text-center') This is a automatic and web-based MySQL Database documentation tool.
 
-<<<<<<< HEAD
-block append jsIncludes
-    script(rel='text/javascript', src='/javascripts/client_navigation.js', charset='utf-8')
 
-block content
+
+block append navigation
 
     nav(class='navbar navbar-light navbar-expand-md sticky-top' id='navigation' style='background-color: #e3f2fd;')
         div(class='navbar-collapse collapse' id='collapseNavbar')
@@ -73,65 +68,5 @@ block content
             div(class='col-md-auto')
                 a(href='./print/tables') a printable list of all tables
             div(class='col col-lg-2')
-=======
-block content
-
-    nav(class='navbar navbar-expand-lg navbar-light sticky-top' id='navigation' style='background-color: #e3f2fd;')
-
-        div(class='collapse navbar-collapse' id='navbarContent')
-            ul(class='navbar-nav mr-auto')
-                li(class='nav-item active')
-                    a(class='nav-link' href='#' id='navHome') Home
-                li(class='nav-item')
-                    a(class='nav-link' href='#' id='navProcedures') Procedures
-                li(class='nav-item')
-                    a(class='navbar-nav mr-auto nav-link' href='#' id='navTables') Tables
-                li(class='nav-item')
-                    a(class='nav-link' href='#' id='navAllProcedures') list all Procedures
-                li(class='nav-item')
-                    a(class='navbar-nav mr-auto nav-link' href='#' id='navAllTables') list all Tables
-                li(class='nav-item')
-                    a(class='nav-link' href='#' id='navPrintProcedures') print all Procedures
-                li(class='nav-item')
-                    a(class='navbar-nav mr-auto nav-link' href='#' id='navPrintTables') print all Tables
 
 
-
-
-
-
-
-
-
-    //div(id='menu-container' class'container')
-    //    div(class='row justify-content-md-center')
-    //        div(class='col col-lg-2')
-    //        div(class='col-md-auto')
-    //            a(href='./menu/procedures') a menu to list all or one procedure
-    //        div(class='col col-lg-2')
-    //    div(class='row justify-content-md-center')
-    //        div(class='col col-lg-2')
-    //        div(class='col-md-auto')
-    //            a(href='./menu/tables') a menu to list all or one table
-    //        div(class='col col-lg-2')
-    //    div(class='row justify-content-md-center')
-    //        div(class='col col-lg-2')
-    //        div(class='col-md-auto')
-    //            a(href='./list/procedures') list all procedures
-    //        div(class='col col-lg-2')
-    //    div(class='row justify-content-md-center')
-    //        div(class='col col-lg-2')
-    //        div(class='col-md-auto')
-    //            a(href='./list/tables') List all tables
-    //        div(class='col col-lg-2')
-    //    div(class='row justify-content-md-center')
-    //        div(class='col col-lg-2')
-    //        div(class='col-md-auto')
-    //            a(href='./print/procedures') a printable list of all procedures
-    //        div(class='col col-lg-2')
-    //    div(class='row justify-content-md-center')
-    //        div(class='col col-lg-2')
-    //        div(class='col-md-auto')
-    //            a(href='./print/tables') a printable list of all tables
-    //        div(class='col col-lg-2')
->>>>>>> master_conflict-20180916-171800
