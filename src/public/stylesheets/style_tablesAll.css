@@ -6,21 +6,22 @@
 }
 
 #wrapHeaderDiv {
-    position:fixed;
+    /*position:fixed;
     left:25px;
     right:25px;
     width:auto;
+    */
 }
 
 #wrapperDiv {
-    position:fixed;
+    /*position:fixed;
     top: 130px;
     margin-left:auto;
     margin-right:auto;
     width: 90%;
     overflow:auto;
     height: 80%;
-
+    */
 }
 
 .div_tbl {
