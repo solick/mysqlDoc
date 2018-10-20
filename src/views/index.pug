@@ -8,18 +8,20 @@ block append jsIncludes
 
 block append content
 
-    div(class="container pt-5")
+    div(class="container pt-5", id="welcome-card")
         div(class="row")
             div(class="col")
             div(class="col-6")
-                div(class='card text-center', style="border-color:indigo", id="welcome-card")
+                div(class='card text-center', style="border-color:indigo")
                     div(class="card-header font-weight-bold") A simple tool to document MySQL databases
                     ul(class="list-group list-group-flush")
                         li(class="list-group-item") By using the comment option in MySQL databses für functions, procedures and tables a reasonable documentation can be provided.
                         li(class="list-group-item") After filling out in the database simply add the database credentials and project information in the config.js.
                         li(class="list-group-item") Finally simply use the navigation to select appropriate view on the database documentation, including a ready-to-print version
-                div(clas='invisible', style='display:none', id='containerListContent') This is where the content comes...
+
             div(class="col")
+
+    div(class='', style='display:none', id='containerListContent') This is where the content comes...
 
 
 
