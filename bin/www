@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+var debug = require('debug')('mysqlDoc');
+var app = require('../src/app');
+var config = require("../src/config");
+
+app.set('port', process.env.PORT || config.srv.port);
+
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port + " and running in " + app.get('env') + " mode.");
+
+});
