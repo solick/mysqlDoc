@@ -130,14 +130,13 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/***** for printing ****/
+/*!***** for printing ****!
 
 @media print {
 
     body {
         margin: 0;
         padding: 0;
-        background-color: #FAFAFA;
         font: 12pt "Tahoma";
     }
     * {
@@ -174,4 +173,4 @@
 
 
 
-}
+}}*/
