@@ -1,3 +1,4 @@
+/*
 
 .headName {
     margin-right: 5px;
@@ -150,9 +151,9 @@
 
 
 
-/*** column table ***/
+!*** column table ***!
 
-/* the Div container */
+!* the Div container *!
 .tblColumnList {
     width: 800px;
     margin: 0 auto;
@@ -234,7 +235,7 @@
 }
 
 
-/**********/
+!**********!
 
 #mainDiv2 {
     position:fixed;
@@ -261,4 +262,4 @@
 
 
 
-}
+}*/

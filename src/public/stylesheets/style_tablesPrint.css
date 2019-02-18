@@ -1,8 +1,9 @@
+/*** allg layout */
 body {
     margin: 0;
     padding: 0;
     background-color: #FAFAFA;
-    font: 0.8em "Tahoma";
+    font: 1em "Tahoma";
 }
 * {
     box-sizing: border-box;
@@ -10,76 +11,40 @@ body {
 }
 
 .page {
-    width: 21cm;
-    //min-height: 29.7cm;
-    height: 29.7cm;
-    padding: 1cm;
-    margin: 1cm auto;
-    border: 1px #D3D3D3 solid;
-    border-radius: 5px;
-    background: white;
+    min-height: 297mm;
+    min-width: 210mm;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     position: relative;
+    page-break-inside: avoid;
+    size: A4;
 }
 
 .headName {
     margin-right: 5px;
-    font-weight:bolder;
+    font-weight: bolder;
+    padding-bottom: 1%;
 }
 
 #wrapHeaderDiv {
-    /*
-    position:fixed;
-    left:25px;
-    right:25px;
-    width:auto;
-    */
-}
-
-#wrapperDiv {
-    /*
-    position:fixed;
-    top: 130px;
-    margin-left:auto;
-    margin-right:auto;
-    width: 90%;
-    overflow:auto;
-    height: 80%;
-    */
 
 }
-
-/*
-.div_tbl {
-    margin-bottom: 2em;
-    border: 1px solid blue;
-    padding-bottom: 25px;
-    width: 900px;
-    margin-left: auto;
-    margin-right:auto;
-
-    border-radius: 5px;
-
-
-}
-*/
 
 .div_tbl {
     border: 0px;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 .div_tbl_space {
     height: 15px;
 }
 
-
 .tblName {
-    margin: 5px;
+    padding: 10px;
+    margin-right: 10px;
     font-size: 16px;
-    font-weight: bolder;
-    border: 2px dotted black;
+    font-weight: bold;
+    border: 1px dotted dimgrey;
     text-align: center;
 }
 
@@ -89,22 +54,22 @@ body {
 
 }
 
-
 .tblComment {
     width: 100%;
     margin: 0 auto;
-    padding-left:15px;
+    padding-left: 15px;
     border: 2px solid grey;
     box-shadow: 2px 2px 20px black;
     border-radius: 3px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
 .tblBody {
 
     width: 100%;
     margin: 0 auto;
-    padding-left:15px;
+    padding-left: 15px;
     border: 2px solid grey;
     box-shadow: 2px 2px 20px black;
     border-radius: 3px;
@@ -114,7 +79,7 @@ body {
 }
 
 .tblBody .headName {
-    text-align:center;
+    text-align: center;
     margin-left: 25%;
 
 }
@@ -122,15 +87,13 @@ body {
 .div_tbl_header {
     width: 100%;
     margin: 0 auto;
-    padding-left:15px;
+    padding-left: 15px;
     border: 2px solid grey;
     box-shadow: 2px 2px 20px black;
     border-radius: 3px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
-
-
 
 /*** column table ***/
 
@@ -138,25 +101,22 @@ body {
 .tblColumnList {
     width: 100%;
     margin: 0 auto;
-    padding-left:15px;
+    padding-left: 15px;
     border: 2px solid grey;
     box-shadow: 2px 2px 20px black;
     border-radius: 3px;
     padding-top: 15px;
     padding-bottom: 15px;
 
-
 }
 
 .tblColumnList-Table {
     width: 98%;
     border-collapse: collapse;
-//border: 1px solid red;
 
 }
 
 .tblColumnList-Table thead {
-
 
 }
 
@@ -179,24 +139,18 @@ body {
     background-color: lightgrey;
 }
 
-
-
 .tblColumnList-Table td:not(:last-child), .tblColumnList-Table th:not(:last-child) {
     border-right: 1px solid black;
-
-
 
 }
 
 .table-Field {
-
 
 }
 
 .table-Type {
 
     width: 60px;
-
 
 }
 
@@ -206,16 +160,13 @@ body {
 
 .table-Null {
 
-
 }
 
 .table-Key {
 
-
 }
 
 .table-Default {
-
 
 }
 
@@ -224,56 +175,39 @@ body {
 }
 
 
-.wrapFooterDiv {
-    position: absolute;
-    bottom: 5px;
-    margin-left: auto;
-    margin-right:auto;
-    width: 17cm;
-
-}
-
 .headerPrint {
     font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
-    font-weight: bolder;
-    text-align:center;
+    font-weight: bold;
+    text-align: center;
     padding-bottom: 1%;
 
 }
-
 
 .footerPrint {
     font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
-    font-weight: bolder;
+    font-weight: normal;
     text-align:center;
-    padding-bottom: 1%;
-
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
 }
-
 
 /** Intro Site **/
 
 #introSite {
-    width: 80%;
-    height: 90%;
-    border: 0px solid red;
+    width: 100%;
+    height: 100%;
     position: absolute;
 
 }
 
-
 #introTitle {
-
     margin-top: 10%;
-
-
-
 }
 
 #introTitle p {
     text-align: center;
     font-size: 2em;
-
 }
 
 #introTitleDetails {
@@ -290,15 +224,13 @@ body {
 
 #introWrapper {
 
-    position:absolute;
+    position: absolute;
     bottom: 15px;
     left: 25px;
-
 
 }
 
 #introVersion {
-
 
 }
 
@@ -310,7 +242,7 @@ body {
 
 }
 
-#introAuthor p{
+#introAuthor p {
 
 }
 
