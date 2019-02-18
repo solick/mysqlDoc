@@ -1,3 +1,4 @@
+/*
 
 
 .headName {
@@ -89,7 +90,7 @@
 }
 
 
-/*
+!*
 .div_SP {
     width: 21cm;
     min-height: 29.7cm;
@@ -100,7 +101,7 @@
     background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-*/
+*!
 
 .div_SP_space {
     height: 15px;
@@ -172,7 +173,7 @@
     padding-bottom: 15px;
 }
 
-/***************/
+!***************!
 
 #mainDiv2 {
     position:fixed;
@@ -198,3 +199,4 @@
     box-shadow: 8px 8px 10px #ff0a1b;
     border-radius: 5px;
 }
+*/

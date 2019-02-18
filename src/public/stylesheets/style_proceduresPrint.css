@@ -9,38 +9,18 @@ body {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-
 .page {
-    width: 21cm;
-    min-height: 29.7cm;
-    padding: 2cm;
-    margin: 1cm auto;
-    border: 1px #D3D3D3 solid;
-    border-radius: 5px;
-    background: white;
+    min-height: 297mm;
+    min-width: 210mm;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     position: relative;
-}
-
-
-/** Header and Footer **/
-.wrapHeaderDiv {
-
-
-}
-
-.wrapFooterDiv {
-    position: absolute;
-    bottom: 5px;
-    margin-left: auto;
-    margin-right:auto;
-    width: 17cm;
-
+    page-break-inside: avoid;
+    size: A4;
 }
 
 .headerPrint {
     font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
-    font-weight: bolder;
+    font-weight: bold;
     text-align:center;
     padding-bottom: 1%;
 
@@ -49,52 +29,20 @@ body {
 
 .footerPrint {
     font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
-    font-weight: bolder;
+    font-weight: normal;
     text-align:center;
-    padding-bottom: 1%;
-
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100%;
 }
 
 
 
-/* general page settings for printer */
-/*
-@page {
-    size: A4;
-    margin: 0;
-}
-@media print {
-    .page {
-        margin: 0;
-        border: initial;
-        border-radius: initial;
-        width: initial;
-        min-height: initial;
-        box-shadow: initial;
-        background: initial;
-        page-break-before: allways;
-    }
 
-    .page-break {
-        display:block;
-        page-break-before: always;
-     }
 
-    .wrapHeaderDiv {
-        //display: none;
-
-    }
-
-    .wrapFooterDiv {
-        //display: none;
-
-    }
-}
-*/
-
-@media all {
+/*@media all {
     .page-break { display:none;}
-}
+}*/
 
 /**** Layout of procedures ***/
 
@@ -116,29 +64,25 @@ body {
 }
 
 .procName {
-    margin: 5px;
+    padding: 10px;
     font-size: 1em;
-    font-weight: bolder;
-    border: 2px dotted black;
+    font-weight: bold;
+    border: 1px dotted dimgrey;
     text-align: center;
 }
 
 .procType {
-    margin-top: 5px;
+    padding-top: 5px;
     margin-left: 5px;
-
 }
 
 .procParams {
     margin: 5px;
-
 }
 
 .procReturns {
     margin-top: 5px;
     margin-left: 5px;
-//margin-left:35px;
-
 }
 
 .procComment {
@@ -188,26 +132,20 @@ body {
 /** Intro Site **/
 
 #introSite {
-    width: 80%;
-    height: 90%;
-    border: 0px solid red;
+    width: 100%;
+    height: 100%;
     position: absolute;
 
 }
 
 
 #introTitle {
-
     margin-top: 10%;
-
-
-
 }
 
 #introTitle p {
     text-align: center;
     font-size: 2em;
-
 }
 
 #introTitleDetails {
@@ -227,8 +165,6 @@ body {
     position:absolute;
     bottom: 15px;
     left: 25px;
-
-
 }
 
 #introVersion {
