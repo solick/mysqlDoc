@@ -1,10 +1,16 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+
+var app = express();
+
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var route_list = require('./routes/list');
@@ -18,7 +24,6 @@ var debug = require('debug')('app');
 
 var mysql = require('mysql');
 
-var app = express();
 
 app.set('env',config.srv.env);
 
@@ -30,8 +35,6 @@ app.set('view engine', 'pug');
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
