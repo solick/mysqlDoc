@@ -123,7 +123,7 @@ var dBConn = function(dBConfig) {
      */
     function queryTables(callback, tableName) {
         var sqlStr = "";
-
+        //console.log(tableName);
         if(tableName === undefined)
         {
             sqlStr += "SELECT " +
@@ -131,7 +131,7 @@ var dBConn = function(dBConfig) {
                 "`information_schema`.`tables`.`TABLE_TYPE` AS `table_type`," +
                 "`information_schema`.`tables`.`TABLE_COMMENT` AS `table_comment` " +
                 "FROM `information_schema`.`tables` " +
-                "WHERE (`information_schema`.`tables`.`TABLE_SCHEMA` like " + that.pool.escape(that.config.db.database) + ")";
+                "WHERE (`information_schema`.`tables`.`TABLE_SCHEMA` like " + that.pool.escape(that.config.db.database) + ");";
         }
         else
         {
@@ -141,7 +141,7 @@ var dBConn = function(dBConfig) {
                 "`information_schema`.`tables`.`TABLE_COMMENT` AS `table_comment` " +
                 "FROM `information_schema`.`tables` " +
                 "WHERE (`information_schema`.`tables`.`TABLE_SCHEMA` like " + that.pool.escape(that.config.db.database) + ") " +
-                "AND (`information_schema`.`tables`.`TABLE_NAME` like " + that.pool.escape(tableName) + ") ";
+                "AND (`information_schema`.`tables`.`TABLE_NAME` like " + that.pool.escape(tableName) + ");";
         }
 
         //console.log(sqlStr);
@@ -151,12 +151,14 @@ var dBConn = function(dBConfig) {
 
             if (err) {
                 if(that.config.db.debugMode === true) {
+                    console.log('conn error ' + err);
                     debug("Error during connection to the database.");
                 }
                 return;
             }
             else {
                 if(that.config.db.debugMode === true) {
+                    console.log('connected to db');
                     debug('connected to mysql server as id ' + connection.threadId);
                 }
             }
@@ -173,7 +175,7 @@ var dBConn = function(dBConfig) {
                     debug("successfully read all tables from database.");
                 }
 
-                //console.log(rows);
+                console.log(rows);
 
                 var count = 0;
 
@@ -214,7 +216,7 @@ var dBConn = function(dBConfig) {
                                 //console.log(tmpRow);
 
                                 if ("Create Table" in tmpRow[0]) {
-                                    //console.log(tmpRow[0]["Table"] + " is a Table");
+                                    console.log(tmpRow[0]["Table"] + " is a Table");
                                     obj.tblBody = tmpRow[0]["Create Table"];
                                 }
                                 else if ("Create View" in tmpRow[0]) {
@@ -277,7 +279,7 @@ var dBConn = function(dBConfig) {
                                                 tmpObj.Comment = tmpR["Comment"];
 
                                                 //console.log(obj.columnList);
-
+                                                console.log(tmpObj);
                                                 obj.columnList.push(tmpObj);
 
 
@@ -377,15 +379,17 @@ var dBConn = function(dBConfig) {
         }
 
         queryTables(function(err, rows) {
-
+            console.log(res);
+            console.log(rows);
             if(that.config.debugLevel > 2) {
+                console.log('got tables');
                 debug("successfully read from db, now passing results to jade template");
             }
-            res.render('TablesAll', {
+            res.render('tablesAll', {
                 title: that.config.dbDoc.Tables.Title,
                 results: rows
             });
-
+            //console.log(res);
         });
 
     };
@@ -446,7 +450,7 @@ var dBConn = function(dBConfig) {
         }
 
         queryTables(function(err, rows) {
-            res.render("TablesOverview", {
+            res.render("tablesOverview", {
                 title: "Overview of Tables and Views",
                 results: rows
             });
@@ -502,7 +506,7 @@ var dBConn = function(dBConfig) {
 
                 debug("successfully read from db, now passing results to jade template");
             }
-            res.render('TablesPrint', {
+            res.render('tablesPrint', {
                 title: that.config.dbDoc.Tables.Title,
                 titleDetails: that.config.dbDoc.Tables.TitleDetail,
                 version: that.config.dbDoc.Tables.Version,
